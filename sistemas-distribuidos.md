@@ -55,3 +55,12 @@ Como manejar las fallas:
 Los sistemas distribuidos de google se basan en la orquestración. Un director dirije el resto de los componentes.
 
 En cambio Amazon, utiliza "coreografia", donde cada componente reacciona a lo que realiza el otro.
+
+## Grids vs Clusters
+
+|          Grids           |      Clusters      |
+| :----------------------: | :----------------: |
+| Multiples organizaciones | Misma organizacion |
+|       Heterogeneo        |     Homogeneo      |
+
+---
