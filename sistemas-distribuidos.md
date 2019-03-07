@@ -21,7 +21,8 @@ Podemos ajustar nuestra capacidad on demand. Aunque comprar una computadora pued
 
 ## Escalabilidad
 
-**Tamaño**
+### Tamaño
+
 Recursos
 
 - Vertical: aumentar la capacidad de la misma máquina
@@ -29,10 +30,12 @@ Recursos
 
 Usuarios
 
-**Geograficamente**
+### Geograficamente
+
 Poder crecer a nivel geografico a través del planeta. Si me expando a otros continentes voy a querer agregar máquinas mas cercanas a los clientes. Voy a necesitar una base de datos global distribuida para poder acceder a los datos desde cualquier lugar.
 
-**Administración**
+### Administración
+
 Administrar todos los recursos de manera automatica. Cloud computing transformo un problema de hardware en un problema de software. Da la capacidad de manejar la infraestructura con código.
 
 ### Tecnicas de escalabilidad
