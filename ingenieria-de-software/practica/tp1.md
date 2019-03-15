@@ -30,3 +30,5 @@ Por ejemplo: se espera un pago de $20.
 7. Se devuelve vuelto de 5
 
 Se pueden realizar pagos mixtos de efectivo y tarjeta si se paga primero parte del monto con efectivo.
+
+**cashier:** maneja los medios de pago y acumula el monto total pagado.  

@@ -67,3 +67,47 @@ En cambio Amazon, utiliza "coreografia", donde cada componente reacciona a lo qu
 |       Heterogeneo        |     Homogeneo      |
 
 ---
+
+## EBS
+
+Elastic Block Storage
+
+SSD de propósito generico: tienen una cierta cantidad de operaciones por segundo permitias, pero si no se utilizan todas, se acumulan hasta un cierto máximo.
+
+SSD IOPS: tiene una cantidad fija de operaciones por segundo.
+
+## Elastic Capacity
+
+**Reserved capacity:** Podemos reservar una máquina por uno o tres años y recibimos un descuento a diferencia de on demand.
+
+**On demand:** Pagamos por hora la máquina y podemos agregar o quitar máquinas dependiendo la necesidad.
+
+**Spot (bidding):** Amazon remata la capacidad extra que tiene osciosa. El que gana la subasta es el que mayor máximo ofrece, pero paga un precio definido actual. Conforme aumenta la demanda, comienza a pagar más, hasta llegar a su máximo ofertado. Al pasar el máximo ofertado, amazon le saca la máquina.  
+Debido a la capacidad de caerme en cualquier momento, estas máquinas deben ser utilizadas para aplicacines **idempotentes**.
+
+## Nombres de máquinas
+
+Primero: letra
+
+c: computo  
+m: propósito general  
+r: más memoria que cpu  
+t: la única donde los cores del CPU son compartidos  
+i: con disco local SSD
+
+Segundo: generación (número)
+
+## Load balancer
+
+Se ocupa de distribuir requests entre las distintas máquinas disponibles.
+
+**Elastic Load Balancer:** servicio provisto por AWS. Tiene un precio fijo + un precio por requests. Automáticamente agrega más máquinas para funcionar como Load Balancer. Hace Health Checks para no mandar requests a instancias caidas/problematicas.  
+También nos permite utilizar varios availability zones y distribuir tráfico entre ellos.
+
+## AutoScaling Groups
+
+Enseñamos a Amazon como lanzar nuevas máquinas mediante una **Launch Config**. Dependiendo la demanda, puede decidir agregar o eliminar máquinas. Le damos una cantidad mínima, una cantidad deseada y una cantidad máxima.
+
+Con Scaling Policies podemos escuchar alarmas de CloudWatch y decidir que hacer. Por ejemplo, cuando la utilización promedio de CPU es &gt; 70% agrego una máquina, cuando pasa a ser &lt; 40% elimino una máquina.
+
+También se pueden distribuir los grupos en multiples availability zones (siempre dentro de la misma región), Amazon va a buscar distribuir la misma cantidad de maquinas en cada una.
