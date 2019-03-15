@@ -14,4 +14,3 @@ El algoritmo de planeamiento a utilizar depende del uso que le voy a dar al sist
 3.4.6  
 3.6  
 3.7.1  
-
