@@ -43,3 +43,13 @@ Para lograr sus metas y objetivos toda empresa que desarrolle una actividad indu
 ...TeoriaDeLaEmpresa
 
 Leer **teoría de la contabilidad**
+
+---
+
+El 7% de las ganancias de la empresa debe quedar en la empresa por reserva legal.
+
+El valor real de la empresa, si quiero liquidar, es el patrimonio neto.
+
+**Contabilidad gerencial:** Generar información adicional necesaria para el correcto manejo del negocio
+
+**Contabilidad financiera:** El único registro legal de las cosas. Proveer información para terceras partes ajenas a la conducción de la empresa. Todo lo que esta fuera de los registros no le pertenece a la empresa.
