@@ -39,3 +39,5 @@ Asegurarse que fue realizado de la manera correcta.
 Estamos construyendo el producto correcto? Sirve para su uso pretendido?
 
 ![Validación](2019-03-08-18-55-34.png)
+
+**Smoke test:** probar los features que se consideran más relevantes
