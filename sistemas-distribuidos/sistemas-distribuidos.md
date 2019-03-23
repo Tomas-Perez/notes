@@ -108,6 +108,86 @@ También nos permite utilizar varios availability zones y distribuir tráfico en
 
 Enseñamos a Amazon como lanzar nuevas máquinas mediante una **Launch Config**. Dependiendo la demanda, puede decidir agregar o eliminar máquinas. Le damos una cantidad mínima, una cantidad deseada y una cantidad máxima.
 
-Con Scaling Policies podemos escuchar alarmas de CloudWatch y decidir que hacer. Por ejemplo, cuando la utilización promedio de CPU es &gt; 70% agrego una máquina, cuando pasa a ser &lt; 40% elimino una máquina.
+Con Scaling Policies podemos escuchar alarmas de CloudWatch y decidir que hacer. Por ejemplo, cuando la utilización promedio de CPU es > 70% agrego una máquina, cuando pasa a ser < 40% elimino una máquina.
 
 También se pueden distribuir los grupos en multiples availability zones (siempre dentro de la misma región), Amazon va a buscar distribuir la misma cantidad de maquinas en cada una.
+
+---
+
+## Niveles de servicio
+
+![Niveles de servicio](2019-03-21-14-23-43.png)
+
+## Digital Ocean
+
+### Terraform
+
+```terraform
+    variable "digitalocean_token" {
+        description = "DO TOKEN"
+    }
+
+    variable "dc" {
+        description = "Datacenter"
+        default = "sgp1"
+    }
+
+    provider "digitalocean" {
+        token = "${var.digitalocean_token}"
+    }
+
+    resource "digitalocean_droplet" "web" {
+        image = "ubuntu-18-04-x64"
+        name = "web-1"
+        region = "${var.dc}"
+        size = "s-1vcpu-1gb"
+
+        ssh_keys = [
+            random_key
+        ]
+
+        user_data = <<EOF
+        #cloud-config
+        runcmd:
+            - apt-get -y update
+            - apt-get -y install ngix
+        EOF
+    }
+
+    resource "digitalocean_loadbalancer" "public" {
+        name = "loadbalancer-1"
+        region = "${var.dc}"
+
+        "forwarding_rule" {
+            entry_port = 80
+            entry_protocol = "http"
+            target_port = 80
+            target_protocol = "http"
+        }
+
+        "healthcheck" {
+            port = 22
+            protocol = "tcp"
+        }
+
+        droplet_ids = ["${digitalocean_droplet.web.id}"]
+    }
+
+    resource "digitalocean_record" "jcluster-lb" {
+        domain = "jcluster.com"
+        name = "www"
+        type = "A"
+        value = "${digitalocean_loadbalancer.public.ip}"
+    }
+
+    output "loadbalancer" {
+        value = "${digitalocean_loadbalancer.public.ip}"
+    }
+```
+
+Comandos de terraform:
+
+- **init**: inicializa un directorio conteniendo los archivos de terraform.
+- **plan**: muestra el plan a ejecutar con el script
+- **apply**: aplica el plan
+- **destroy**: revierte el script como si nunca hubiese sido ejecutado

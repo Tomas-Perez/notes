@@ -31,11 +31,13 @@ Por ejemplo: se espera un pago de $20.
 
 Se pueden realizar pagos mixtos de efectivo y tarjeta si se paga primero parte del monto con efectivo.
 
-**cashier:** maneja los medios de pago y acumula el monto total pagado.  
+**cashier:** maneja los medios de pago y acumula el monto total pagado.
 
 ## Preguntas
 
 1. Como sería la carga de ingredientes, recetas y el manejo de precios. El caso de uso solo contempla el chequeo de stock, me limito a lo que dicen los requerimientos?
-2. Precio de bebida vs precio de ingredientes
+2. Precio de bebida vs precio de ingredientes  
+   Asumo que cada ingrediente tiene precio y es igual para todas las máquinas.  
+
 3. Separar las responsabilidades de stock / dispensar liquido y forzarme a usar dos mapas o juntar ambas cosas en la interfaz Dispenser?
 4. Como seria la conexión con el módulo principal? Siendo realistas cada máquina le pegaría a una API HTTP del servidor que sería el módulo principal.
