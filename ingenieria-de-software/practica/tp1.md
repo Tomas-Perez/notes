@@ -41,3 +41,7 @@ Se pueden realizar pagos mixtos de efectivo y tarjeta si se paga primero parte d
 
 3. Separar las responsabilidades de stock / dispensar liquido y forzarme a usar dos mapas o juntar ambas cosas en la interfaz Dispenser?
 4. Como seria la conexión con el módulo principal? Siendo realistas cada máquina le pegaría a una API HTTP del servidor que sería el módulo principal.
+
+## Ingredientes
+
+Los ingredientes tienen los mismos precios en todas las máquinas. El precio de una bebida esta dado por la suma de todos sus ingredientes.
