@@ -71,6 +71,9 @@ Partida doble:
 | Patrimonio Neto - | Patrimonio Neto + |
 |    Perdidas +     |                   |
 |                   |    Ganancias +    |
+|      (RA) -       |      (RA) +       |
+
+RA = Regulazación de amortización
 
 | 27/02           | D    | H    |
 | --------------- | ---- | ---- |
