@@ -42,6 +42,31 @@ Se pueden realizar pagos mixtos de efectivo y tarjeta si se paga primero parte d
 3. Separar las responsabilidades de stock / dispensar liquido y forzarme a usar dos mapas o juntar ambas cosas en la interfaz Dispenser?
 4. Como seria la conexión con el módulo principal? Siendo realistas cada máquina le pegaría a una API HTTP del servidor que sería el módulo principal.
 
-## Ingredientes
+## Revision
 
-Los ingredientes tienen los mismos precios en todas las máquinas. El precio de una bebida esta dado por la suma de todos sus ingredientes.
+MCU_001_Control de stock de máquina de café
+
+Si se hace un caso de uso es **porque alguien lo va a usar**
+
+Descripción: realizar el control diario de una máquina de café
+
+Actores: Administrador
+
+Precondiciones:
+
+- Estar logeado en el sistema como administrador
+- Tiene que estar la máquina este funcionando
+
+Secuencia normal:
+
+- El sistema muestra en la pantalla una navbar con opciones, un a foto de perfil del usuario y unas tablas las maquinas de cafe
+- El usuario selecciona una maquina de cafe
+- El sistema muestra una tabla con el stock de cada ingrediente de la maquina de cafe
+
+Postcondicion: el usuario ha realizado exitosamente el control del stock de la máquina
+
+Secuencia alternativa:
+
+En paso pongo, el numero de paso donde podría ocurrir la otra secuencia.
+
+Para la semana que viene: explotar este CU y mandarlo por mail
