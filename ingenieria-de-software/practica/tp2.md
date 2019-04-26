@@ -38,3 +38,7 @@ A futuro se desea realizar reportes:
 - Por medios de pago
 - Por tipo de operación
 - etc
+
+## Preguntas
+
+1. atributos por categoria para refinar busqueda y sugerencias? por ejemplo celular (ram, android/ios, cpu, camara)

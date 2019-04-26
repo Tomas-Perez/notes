@@ -44,3 +44,9 @@ Saldo final = Saldo inicial $ - (\$) gasto + (\$) ingresos
 ## Problema 3
 
 El 60% va a caja y el 40% a derechos a cobrar
+m
+
+## Problema 6
+
+## Problema 7
+
