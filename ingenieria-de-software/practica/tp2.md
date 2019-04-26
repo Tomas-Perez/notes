@@ -39,6 +39,27 @@ A futuro se desea realizar reportes:
 - Por tipo de operación
 - etc
 
-## Preguntas
+## Modulos
 
-1. atributos por categoria para refinar busqueda y sugerencias? por ejemplo celular (ram, android/ios, cpu, camara)
+1. Catálogo
+2. Facturación
+3. Stock
+4. Compras
+5. Persona
+6. Sugerencias
+
+### Datos requeridos de productos por módulo
+
+CatalogItem(Product, Description, Category)  
+Category(ID, Name)  
+Combo(Item[])  
+SingleProduct(Product)  
+CatalogEntry(Item, Price)
+Product(Name, ID)
+
+1. Catálogo: SingleProduct, Category, Combo (Name, ID, Price, Description, Category)
+2. Facturación: SingleProduct, Combo, CatalogEntry (Name, ID, ID_Catalog, Price)
+3. Stock: SingleProduct (Name, ID)
+4. Compras: Product, SingleProduct, Combo, CatalogEntry (Name, ID, Price)
+5. Persona
+6. Sugerencias: SingleProduct, Category (Name, Category, ID)
