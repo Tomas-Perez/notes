@@ -18,7 +18,7 @@ La diferencia entre ingresos y gastos es la utilidad. La utilidad permitirá rei
 
 **Activo:** bienes y derechos (de cobrar, deudas a favor).  
 **Pasivo:** deudas en contra y obligaciones  
-**Patrimonio netro:** capital  
+**Patrimonio neto:** capital  
 
 Activo = Pasivo + Patromonio neto
 

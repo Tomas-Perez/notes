@@ -40,7 +40,7 @@ Restricciones que condicionan el logro de los atributos
 
 **Ejercicio:** el período de tiempo en qué se fracciona la vida de un ente. Es conveniente que distintos ejercicios tengan "duración equivalente", para que sus resultados sean comparables.
 
-**Moneda de cuenta:** unidad de memida de los valores contables. La moneda de cuenta a adoptar es la moneda de curso legal.
+**Moneda de cuenta:** unidad de medida de los valores contables. La moneda de cuenta a adoptar es la moneda de curso legal.
 
 ## Principio de devengado (IMPORTANTE)
 
