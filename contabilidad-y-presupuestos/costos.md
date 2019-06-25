@@ -45,5 +45,3 @@ Por FIFO el costo de MP sería
 
 Unidades mes anterior: $10000 / 100u = $100/u
 Unidades mes actual: $12000 / 100u = $120/u
-
-
